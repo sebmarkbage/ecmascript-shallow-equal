@@ -69,8 +69,8 @@ function eq(a, b) {
     return true;
   }
 
-  if (typeof a !== 'object' || b === null ||
-      typeof a !== 'object' || b === null) {
+  if (typeof a !== 'object' || a === null ||
+      typeof b !== 'object' || b === null) {
     return false;
   }
 
