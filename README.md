@@ -211,7 +211,9 @@ Some languages have the ability to memoize a pure function as a built-in feature
 It is much easier to leave that to user space where the rule can be much more loose.
 
 Another problem with that approach is that current frameworks rely on these tests to perform side-effects conditionally. Therefore you have to know if the comparison failed or not. For example, React does mutations on the DOM but _only_ if the return value did change. Therefore the underlying capability needs to be exposed anyway.
+ 
+## Status of this Proposal
 
-## [Status of this Proposal](https://github.com/tc39/ecma262)
+This proposal was presented to TC39 but received a lot of concerns. Mainly around the ability for web browser VM's ability to change their implementation details in the future. They'd be locked in to particular designs. The proposal has been withdrawn.
 
-This has not yet been presented to the TC39 commitee. It is my intention to propose this as a Stage 0 proposal to ECMAScript. However, before we do that we would like to run some experiments in browsers to get some numbers how this could affect performance.
+It would still be nice to expose this hooks in other VM environments such as native apps or WebAssembly based VMs.
